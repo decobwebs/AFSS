@@ -169,6 +169,7 @@ def rate_staff():
                 # Print the updated staff ratings
                 with open("rating.csv", mode="a", encoding='utf-8') as csv_file:
                     csv_file.write(f"{staff_ratings[name]["name"]},"
+
                                    f"{staff_ratings[name]['review']},"
                                    f"{staff_ratings[name]['total_ratings']}\n"
                                    )
