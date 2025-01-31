@@ -87,7 +87,7 @@ def bolaji_NASO_bussines_card():
 
 @app.route('/Company_Profile')
 def view_pdf():
-    # Path to your PDF file
+    # Path to PDF file
     pdf_path = 'static/AFSS_Profile_.pdf'
 
     # Send the PDF file with the correct headers
@@ -102,6 +102,11 @@ def view_pdf():
 @app.route("/CSR_Projects")
 def csr_projects():
     return render_template("csr_Projects.html")
+
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 
 

@@ -852,24 +852,9 @@
     justify-content: center;
 }
 
-.testimonial-carousel .owl-nav .owl-prev {
-    font-size: 50px;
-    margin-right: 80px;
-    color: var(--bs-white);
-    transition: 0.5s;
-}
 
-.testimonial-carousel .owl-nav .owl-next {
-    font-size: 50px;
-    margin-left: 80px;
-    color: var(--bs-white);
-    transition: 0.5s;
-}
 
-.testimonial-carousel .owl-nav .owl-prev:hover,
-.testimonial-carousel .owl-nav .owl-next:hover {
-    color: var(--bs-primary);
-}
+
 /*** Testimonial End ***/
 
 
