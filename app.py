@@ -84,6 +84,10 @@ def bolaji_AFSS_e_card():
 def bolaji_NASO_bussines_card():
     return render_template("bolaji_NASO_bussines_card.html")
 
+@app.route("/training")
+def training():
+    return render_template("training.html")
+
 
 @app.route('/Company_Profile')
 def view_pdf():
