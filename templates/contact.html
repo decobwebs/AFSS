@@ -135,8 +135,7 @@
                                         </div>
                                         <div>
                                             <h4>Telephone</h4>
-                                            <p class="mb-0">
-+2347066511103</p>
+                                            <p class="mb-0">+2347066511103</p>
                                         </div>
                                     </div>
                                 </div>
@@ -146,8 +145,8 @@
                                             <i class="fab fa-firefox-browser fa-2x"></i>
                                         </div>
                                         <div>
-                                            <p>allfreightsupportservices.com/</p>
-                                            <p class="mb-0">+2347066511103</p>
+                                            <p style="font-size: 1.1em; font-weight: bold; color: black;">allfreightsupportservices.com</p>
+
                                         </div>
                                     </div>
                                 </div>
@@ -165,50 +164,73 @@
                     <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.4s">
                         <div class="bg-light p-5 rounded h-100">
                             <h4 class="text-primary mb-4">Send Your Message</h4>
-                            <form>
+                            <form id="contactForm">
                                 <div class="row g-4">
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control border-0" id="name" placeholder="Your Name">
+                                            <input type="text" class="form-control border-0" id="name" name="name" placeholder="Your Name" required>
                                             <label for="name">Your Name</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control border-0" id="email" placeholder="Your Email">
+                                            <input type="email" class="form-control border-0" id="email" name="email" placeholder="Your Email" required>
                                             <label for="email">Your Email</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
-                                            <input type="phone" class="form-control border-0" id="phone" placeholder="Phone">
+                                            <input type="text" class="form-control border-0" id="phone" name="phone" placeholder="Phone">
                                             <label for="phone">Your Phone</label>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control border-0" id="project" placeholder="Project">
+                                            <input type="text" class="form-control border-0" id="project" name="project" placeholder="Project">
                                             <label for="project">Your Project</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control border-0" id="subject" placeholder="Subject">
+                                            <input type="text" class="form-control border-0" id="subject" name="subject" placeholder="Subject" required>
                                             <label for="subject">Subject</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
+                                            <textarea class="form-control border-0" id="message" name="message" placeholder="Leave a message here" style="height: 160px" required></textarea>
                                             <label for="message">Message</label>
                                         </div>
-
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100 py-3">Send Message</button>
+                                        <button type="submit" class="btn btn-primary w-100 py-3">Send Message</button>
                                     </div>
+                                    <div id="responseMessage" class="text-center mt-3"></div>
                                 </div>
                             </form>
+
+                            <script>
+                                document.getElementById("contactForm").addEventListener("submit", function(event) {
+                                    event.preventDefault();
+
+                                    var formData = new FormData(this);
+
+                                    fetch("send-email.php", {
+                                        method: "POST",
+                                        body: formData
+                                    })
+                                    .then(response => response.text())
+                                    .then(data => {
+                                        document.getElementById("responseMessage").innerHTML = data;
+                                        document.getElementById("contactForm").reset(); // Clear form after submission
+                                    })
+                                    .catch(error => {
+                                        document.getElementById("responseMessage").innerHTML = "<p class='text-danger'>Error sending message. Please try again.</p>";
+                                    });
+                                });
+                            </script>
+
+
                         </div>
                     </div>
                     <div class="rounded">
