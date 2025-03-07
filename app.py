@@ -113,7 +113,6 @@ def contact():
     return render_template("contact.html")
 
 
-
 @app.route("/review", methods=["GET", "POST"])
 def review():
     form = ReviewForm()
