@@ -172,40 +172,32 @@
                                             <label for="name">Your Name</label>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 col-xl-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control border-0" id="email" name="email" placeholder="Your Email" required>
-                                            <label for="email">Your Email</label>
-                                        </div>
-                                    </div>
+
                                     <div class="col-lg-12 col-xl-6">
                                         <div class="form-floating">
                                             <input type="text" class="form-control border-0" id="phone" name="phone" placeholder="Phone">
                                             <label for="phone">Your Phone</label>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 col-xl-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control border-0" id="project" name="project" placeholder="Project">
-                                            <label for="project">Your Project</label>
-                                        </div>
-                                    </div>
+
                                     <div class="col-12">
                                         <div class="form-floating">
                                             <input type="text" class="form-control border-0" id="subject" name="subject" placeholder="Subject" required>
                                             <label for="subject">Subject</label>
                                         </div>
                                     </div>
+
                                     <div class="col-12">
                                         <div class="form-floating">
                                             <textarea class="form-control border-0" id="message" name="message" placeholder="Leave a message here" style="height: 160px" required></textarea>
                                             <label for="message">Message</label>
                                         </div>
                                     </div>
+
                                     <div class="col-12">
                                         <button type="submit" class="btn btn-primary w-100 py-3">Send Message</button>
                                     </div>
-                                    <div id="responseMessage" class="text-center mt-3"></div>
+                                    <div id="responsessage" class="text-center mt-3"></div>
                                 </div>
                             </form>
 
@@ -213,22 +205,21 @@
                                 document.getElementById("contactForm").addEventListener("submit", function(event) {
                                     event.preventDefault();
 
-                                    var formData = new FormData(this);
+                                    var name = document.getElementById("name").value;
+                                    var phone = document.getElementById("phone").value;
+                                    var subject = document.getElementById("subject").value;
+                                    var message = document.getElementById("message").value;
 
-                                    fetch("send-email.php", {
-                                        method: "POST",
-                                        body: formData
-                                    })
-                                    .then(response => response.text())
-                                    .then(data => {
-                                        document.getElementById("responseMessage").innerHTML = data;
-                                        document.getElementById("contactForm").reset(); // Clear form after submission
-                                    })
-                                    .catch(error => {
-                                        document.getElementById("responseMessage").innerHTML = "<p class='text-danger'>Error sending message. Please try again.</p>";
-                                    });
+                                    var mailtoLink = "mailto:idrisafssadmiralty@gmail.com" +
+                                                     "?subject=" + encodeURIComponent(subject) +
+                                                     "&body=" + encodeURIComponent("Name: " + name +
+                                                                                   "\nPhone: " + phone +
+                                                                                   "\n\nMessage:\n" + message);
+
+                                    window.location.href = mailtoLink;
                                 });
                             </script>
+
 
 
                         </div>
