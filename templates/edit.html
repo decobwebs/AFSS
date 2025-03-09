@@ -44,199 +44,208 @@
         <!-- Navbar & Hero Start -->
         <div class="container-fluid nav-bar sticky-top px-4 py-2 py-lg-0">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a href="/" class="navbar-brand p-0">
-                    <img src="assets/img/logoo.jpg" width="130">
-                    <span class="display-6 text-dark" style="font-size: 20px;">ALL FREIGHT SUPPORT SERVICES LTD.</span>
+                <a href="" class="navbar-brand p-0">
+                    <img src="assets/img/logoo.jpg"  width="130" >
+                    <a class="display-6 text-dark"  style="font-size: 20px;">ALL FREIGHT SUPPORT SERVICES LTD. </a>
+                    <!-- <img src="assets/img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="/" class="nav-item nav-link active">Home</a>
-                        <a href="/values" class="nav-item nav-link">Our Values</a>
-                        <a href="/service" class="nav-item nav-link">Service</a>
-                        <a href="/view_pdf" class="nav-item nav-link">Company Profile</a>
+                        <a href="{{url_for('home')}}" class="nav-item nav-link active">Home</a>
+                        <a href="{{url_for('values')}}" class="nav-item nav-link">Our Values</a>
+                        <a href="{{url_for('service')}}" class="nav-item nav-link">Service</a>
+                        <a href="{{url_for('view_pdf')}}" class="nav-item nav-link">Company Profile</a>
 
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Gallery</a>
+                            <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Gallery</a>
                             <div class="dropdown-menu m-0">
-                                <a href="/staff_appreciation" class="dropdown-item">Staff Appreciation</a>
-                                <a href="/port_activities" class="dropdown-item">Port Activities</a>
-                                <a href="/csr_projects" class="dropdown-item">CSR Projects</a>
+                                <a href="{{url_for('staff_appreciation')}}" class="dropdown-item">Staff Appreciation</a>
+                                <a href="{{url_for('port_activities')}}" class="dropdown-item">Port / Jetty Activities</a>
+                                <a href="{{url_for('csr_projects')}}" class="dropdown-item">CSR Projects</a>
+
+
+
                             </div>
                         </div>
-                        <a href="/contact" class="nav-item nav-link">Contact</a>
+                        <a href="{{url_for('contact')}}" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="team-icon d-none d-xl-flex justify-content-center me-3">
-                        <a class="btn btn-square btn-light rounded-circle mx-1" href="#"><i class="fa-solid fa-phone"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle mx-1" href="#"><i class="fa-solid fa-envelope"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-square btn-light rounded-circle mx-1" href="#"><i class="fab fa-whatsapp"></i></a>
+
+                        <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fa-solid fa-phone"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fa-solid fa-envelope"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-light rounded-circle mx-1" href=""><i class="fab fa-whatsapp"></i></a>
+
                     </div>
+
                 </div>
             </nav>
         </div>
         <!-- Navbar & Hero End -->
 
-
         <!-- Header Start -->
-        <!-- Testimonial Start -->
-        <div class="container-fluid testimonial py-5">
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Contact Us</h4>
+                <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active text-primary">Contact</li>
+                </ol>    
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Contact Start -->
+        <div class="container-fluid contact py-5">
             <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h1 class="display-5 text-white mb-4 text-primary">Our Services</h1>
-                    <p class="text-white mb-0">We provide a full range of specialist logistics, stevedoring, on/offshore terminal operations, material and cargo handling, haulage and marine support services to the oil, gas,energy and industrial sector as stated below.</p>
+                <div class="row g-5"> 
+                    <div class="col-12 col-xl-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div>
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="contact-add-item rounded bg-light p-4">
+                                        <div class="contact-icon text-primary mb-4">
+                                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Address</h4>
+                                            <p class="mb-0">6A Hinderer Road Apapa G.R.A, Lagos</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="contact-add-item rounded bg-light p-4">
+                                        <div class="contact-icon text-primary mb-4">
+                                            <i class="fas fa-envelope fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Mail Us</h4>
+                                            <p class="mb-0">info@allfreightsupportservices.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="contact-add-item rounded bg-light p-4">
+                                        <div class="contact-icon text-primary mb-4">
+                                            <i class="fa fa-phone-alt fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4>Telephone</h4>
+                                            <p class="mb-0">+2347066511103</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="contact-add-item rounded bg-light p-4">
+                                        <div class="contact-icon text-primary mb-4">
+                                            <i class="fab fa-firefox-browser fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <p style="font-size: 1.1em; font-weight: bold; color: black;">allfreightsupportservices.com</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-around bg-light rounded p-4">
+                                        <a class="btn btn-xl-square btn-primary rounded-circle" href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-xl-square btn-primary rounded-circle" href="#"><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-xl-square btn-primary rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
+                                        <a class="btn btn-xl-square btn-primary rounded-circle" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="bg-light p-5 rounded h-100">
+                            <h4 class="text-primary mb-4">Send Your Message</h4>
+                            <form id="contactForm">
+                                <div class="row g-4">
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="name" name="name" placeholder="Your Name" required>
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control border-0" id="email" name="email" placeholder="Your Email" required>
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="phone" name="phone" placeholder="Phone">
+                                            <label for="phone">Your Phone</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-xl-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="project" name="project" placeholder="Project">
+                                            <label for="project">Your Project</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-0" id="subject" name="subject" placeholder="Subject" required>
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control border-0" id="message" name="message" placeholder="Leave a message here" style="height: 160px" required></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary w-100 py-3">Send Message</button>
+                                    </div>
+                                    <div id="responseMessage" class="text-center mt-3"></div>
+                                </div>
+                            </form>
+
+                            <script>
+                                document.getElementById("contactForm").addEventListener("submit", function(event) {
+                                    event.preventDefault();
+
+                                    var formData = new FormData(this);
+
+                                    fetch("send-email.php", {
+                                        method: "POST",
+                                        body: formData
+                                    })
+                                    .then(response => response.text())
+                                    .then(data => {
+                                        document.getElementById("responseMessage").innerHTML = data;
+                                        document.getElementById("contactForm").reset(); // Clear form after submission
+                                    })
+                                    .catch(error => {
+                                        document.getElementById("responseMessage").innerHTML = "<p class='text-danger'>Error sending message. Please try again.</p>";
+                                    });
+                                });
+                            </script>
+
+
+                        </div>
+                    </div>
+                    <div class="rounded">
+                        <iframe class="rounded w-100"
+                                style="height: 400px;"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31717.12372158071!2d3.3593979176243094!3d6.445460747495171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf525ba63a3a9%3A0x5b48f65678e125a5!2s6A%20Hinderer%20Rd%2C%20Apapa%20G.R.A%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1710034567890!5m2!1sen!2sng"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
                 </div>
             </div>
         </div>
-        <!-- Testimonial End -->
-
-        <br>
-
-        <!-- Blog Start -->
-        <div class="container-fluid blog pb-5">
-            <div class="container pb-5">
-                <div class="row g-4">
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <a href="#">
-                                    <img src="assets/img/attraction55.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                </a>
-                                <div class="blog-category py-2 px-4">Stevedoring</div>
-
-                            </div>
-                            <div class="blog-content p-4">
-                                <div>
-                                    <i class="fas fa-check" style="color: #00ff00;"></i>
-                                    <span class="kd-list-text" style="font-size: 18px;">Dedicated personnel for port/terminal operations</span>
-                                </div>
-                                <br>
-                                <div>
-                                    <i class="fas fa-check" style="color: #00ff00;"></i>
-                                    <span class="kd-list-text">Stevedoring Contractors</span>
-                                </div>
-                                <br>
-                                <div>
-                                    <i class="fas fa-check" style="color: #00ff00;"></i>
-                                    <span class="kd-list-text" style="font-size: 18px;">General maritime services and contracts</span>
-                                </div>
-                                <br>
-                                <div>
-                                    <i class="fas fa-check" style="color: #00ff00;"></i>
-                                    <span class="kd-list-text" style="font-size: 18px;">On/Offshore hire, cargo pre-shipment surveys</span>
-
-                                </div>
-                                <br>
-                                <div>
-                                    <i class="fas fa-check" style="color: #00ff00;"></i>
-                                    <span class="kd-list-text" style="font-size: 18px;">Inspection and conditions survey of containers and barges</span>
-                                </div>
-
-
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <a href="#">
-                                    <img src="assets/img/carousel-3.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                </a>
-                                <div class="blog-category py-2 px-4">Lifting and Hoisting</div>
-
-                            </div>
-                            <div class="blog-content p-4">
-                                <div>
-                                    <br>
-                                    <i class="fas fa-check" style="color: #00ff00;"></i>
-                                    <span class="kd-list-text" style="font-size: 18px;">Complex and Non-Complex lifts</span>
-                                    <br>
-                                </div>
-                                
-                                <div>
-                                    <br>
-                                    <i class="fas fa-check" style="color: #00ff00;"></i>
-                                    <span class="kd-list-text">Certified Accessories</span>
-
-                                </div>
-                                 <div>
-                                    <br>
-                                    <i class="fas fa-check" style="color: #00ff00;"></i>
-                                    <span class="kd-list-text">Competent lifting and hoisting personnel.</span>
-
-                                </div>
-                                <div>
-                                    <br>
-                                    <i class="fas fa-check" style="color: #00ff00;"></i>
-                                    <span class="kd-list-text" style="font-size: 18px;">Certified Equipments</span>
-                                </div>
-
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <a href="#">
-                                    <img src="assets/img/carousel-offshore.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                                </a>
-                                <div class="blog-category py-2 px-4">Pipe Handling</div>
-
-                            </div>
-                            <div class="blog-content p-4">
-                                <div>
-                                    <i class="fas fa-check" style="color: #00ff00;"></i>
-                                    <span class="kd-list-text" style="font-size: 18px;">Containerized</span>
-                                </div>
-                                <br>
-                                <div>
-                                    <i class="fas fa-check" style="color:  #00ff00;"></i>
-                                    <span class="kd-list-text">Break Bulk</span>
-                                </div>
-                                <br>
-                                <div>
-                                    <i class="fas fa-check" style="color: #00ff00;"></i>
-                                    <span class="kd-list-text" style="font-size: 18px;">Consolidation Cargo</span>
-                                </div>
-                                <br>
-                                <div>
-                                    <i class="fas fa-check" style="color: #00ff00;"></i>
-                                    <span class="kd-list-text" style="font-size: 18px;">Bulk liquid and dry cargoes</span>
-
-                                </div>
-                                <br>
-                                <div>
-                                    <i class="fas fa-check" style="color: #00ff00;"></i>
-                                    <span class="kd-list-text" style="font-size: 18px;">Chartered Vessel</span>
-                                </div>
-                                <div>
-                                    <i class="fas fa-check" style="color: #00ff00;"></i>
-                                    <span class="kd-list-text" style="font-size: 18px;">Vehicles heavy and over dimension cargo</span>
-                                </div>
-                                <br>
-                                <br>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Blog End -->
-
+        <!-- Contact End -->
 
         <!-- Footer Start -->
         <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
