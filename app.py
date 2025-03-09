@@ -103,7 +103,7 @@ def view_pdf():
     )
 
 
-@app.route("/CSR_Projects")
+@app.route("/csr_projects")
 def csr_projects():
     return render_template("csr_Projects.html")
 
